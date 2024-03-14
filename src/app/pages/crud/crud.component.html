@@ -1,0 +1,36 @@
+<div class="container mt-5">
+    <form (ngSubmit)="onSubmit()" class="card p-4">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" class="form-control" [(ngModel)]="item.nombre" name="nombre" placeholder="Introduce el nombre del ítem">
+      </div>
+      <div class="form-group">
+        <label for="descripcion">Descripción:</label>
+        <input type="text" id="descripcion" class="form-control" [(ngModel)]="item.descripcion" name="descripcion" placeholder="Descripción del ítem" required>
+    </div>
+    <div class="form-group">
+        <label for="precio">Precio:</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+            </div>
+            <input type="number" id="precio" class="form-control" [(ngModel)]="item.precio" name="precio" placeholder="Precio del ítem" required>
+        </div>
+    </div>
+      <div class="btn-group">
+        <button type="submit" class="btn btn-primary">{{ editingItem ? 'Actualizar' : 'Guardar' }}</button>
+        <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancelar</button>
+    </div>
+    </form>
+
+    <!-- Lista de ítems para editar o eliminar -->
+    <ul class="list-group mt-4">
+      <li *ngFor="let item of items" class="list-group-item d-flex justify-content-between align-items-center">
+        {{ item.nombre }} - {{ item.descripcion }} - ${{ item.precio }}
+        <div>
+          <button type="button" class="btn btn-info btn-sm mr-2" (click)="selectItemForEdit(item)">Editar</button>
+          <button type="button" class="btn btn-danger btn-sm" (click)="onDeleteItem(item.id)">Eliminar</button>
+        </div>
+      </li>
+    </ul>
+</div>

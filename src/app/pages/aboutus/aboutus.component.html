@@ -2,126 +2,71 @@
   <h1 class="text-3xl font-extrabold my-16 mx-auto">About Us</h1>
   <div class="flex justify-between my-12 mx-20">
     <div class="w-1/4 mx-auto">
-      <h1 class="font-extrabold text-xl mb-6">MISSION</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat
-        delectus et exercitationem reprehenderit numquam nobis aliquid facere,
-        nesciunt dignissimos eos. Aut unde iste nemo praesentium assumenda
-        quisquam, quas deleniti iure.
-      </p>
+      <h1 class="font-extrabold text-xl mb-6">Our Mission</h1>
+      <p contenteditable="true" (blur)="updateMission($event)">We are dedicated to providing high-quality products that enhance the lives of our customers.</p>
     </div>
     <div class="w-1/4 mx-auto">
-      <h1 class="font-extrabold text-xl mb-6">VISION</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat
-        delectus et exercitationem reprehenderit numquam nobis aliquid facere,
-        nesciunt dignissimos eos. Aut unde iste nemo praesentium assumenda
-        quisquam, quas deleniti iure.
-      </p>
+      <h1 class="font-extrabold text-xl mb-6">Our Vision</h1>
+      <p contenteditable="true" (blur)="updateVision($event)">To become a global leader in innovation, setting new standards in our industry.</p>
     </div>
     <div class="w-1/4 mx-auto">
-      <h1 class="font-extrabold text-xl mb-6">VALUES</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat
-        delectus et exercitationem reprehenderit numquam nobis aliquid facere,
-        nesciunt dignissimos eos. Aut unde iste nemo praesentium assumenda
-        quisquam, quas deleniti iure.
-      </p>
+      <h1 class="font-extrabold text-xl mb-6">Our Values</h1>
+      <p contenteditable="true" (blur)="updateValues($event)">Integrity, Excellence, Innovation, and Customer Satisfaction are the core values that drive our business.</p>
     </div>
   </div>
   <div>
+    
     <h1 class="text-2xl font-extrabold my-12 mx-auto">Our Team</h1>
-    <div class="w-full flex justify-center mb-16">
-      <div
-        class="bg-zinc-900 hover:bg-blue-600 border border-zinc-500 rounded-2xl px-1 py-3 m-3 w-1/6 transition ease-in-out delay-300 hover:scale-110"
-      >
-        <img
-          src="assets/img/team/noe.jpeg"
-          alt=""
-          class="w-4/5 rounded-2xl shadow-lg mb-2 mx-auto"
-        />
-        <h2 class="font-bold text-xl mt-4">Noe Hernandez</h2>
-        <h4 class="font-bold">CEO</h4>
-        <p class="text-sm">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, illum.
-          Deleniti quam laborum
-        </p>
-        <button class="bg-white text-black m-3 py-1 px-12 rounded-xl shadow">
-          More
-        </button>
-      </div>
-      <div
-        class="bg-zinc-900 hover:bg-blue-600 border border-zinc-500 rounded-2xl px-1 py-3 m-3 w-1/6 transition ease-in-out delay-300 hover:scale-110"
-      >
-        <img
-          src="assets/img/team/alan.jpeg"
-          alt=""
-          class="w-4/5 rounded-2xl shadow-lg mb-2 mx-auto"
-        />
-        <h2 class="font-bold text-xl mt-4">Alan Gonzalez</h2>
-        <h4 class="font-bold">CEO</h4>
-        <p class="text-sm">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, illum.
-          Deleniti quam laborum
-        </p>
-        <button class="bg-white text-black m-3 py-1 px-12 rounded-xl shadow">
-          More
-        </button>
-      </div>
-      <div
-        class="bg-zinc-900 hover:bg-blue-600 border border-zinc-500 rounded-2xl px-1 py-3 m-3 w-1/6 transition ease-in-out delay-300 hover:scale-110"
-      >
-        <img
-          src="assets/img/team/jahir.jpeg"
-          alt=""
-          class="w-4/5 rounded-2xl shadow-lg mb-2 mx-auto"
-        />
-        <h2 class="font-bold text-xl mt-4">Jahir Noriega</h2>
-        <h4 class="font-bold">CEO</h4>
-        <p class="text-sm">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, illum.
-          Deleniti quam laborum
-        </p>
-        <button class="bg-white text-black m-3 py-1 px-12 rounded-xl shadow">
-          More
-        </button>
-      </div>
-      <div
-        class="bg-zinc-900 hover:bg-blue-600 border border-zinc-500 rounded-2xl px-1 py-3 m-3 w-1/6 transition ease-in-out delay-300 hover:scale-110"
-      >
-        <img
-          src="assets/img/team/cass.jpeg"
-          alt=""
-          class="w-4/5 rounded-2xl shadow-lg mb-2 mx-auto"
-        />
-        <h2 class="font-bold text-xl mt-4">Johan Cass</h2>
-        <h4 class="font-bold">CEO</h4>
-        <p class="text-sm">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, illum.
-          Deleniti quam laborum
-        </p>
-        <button class="bg-white text-black m-3 py-1 px-12 rounded-xl shadow">
-          More
-        </button>
-      </div>
-      <div
-        class="bg-zinc-900 hover:bg-blue-600 border border-zinc-500 rounded-2xl px-1 py-3 m-3 w-1/6 transition ease-in-out delay-300 hover:scale-110"
-      >
-        <img
-          src="assets/img/team/cass.jpeg"
-          alt=""
-          class="w-4/5 rounded-2xl shadow-lg mb-2 mx-auto"
-        />
-        <h2 class="font-bold text-xl mt-4">Imanol Silva</h2>
-        <h4 class="font-bold">CEO</h4>
-        <p class="text-sm">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, illum.
-          Deleniti quam laborum
-        </p>
-        <button class="bg-white text-black m-3 py-1 px-12 rounded-xl shadow">
-          More
-        </button>
-      </div>
-    </div>
+<div class="w-full flex justify-center mb-16">
+  <!-- Tarjeta de Noe Hernandez -->
+  <div class="bg-zinc-900 hover:bg-red-600 border border-zinc-500 rounded-2xl px-4 py-6 m-3 w-1/6 flex flex-col items-center transition ease-in-out delay-150 hover:scale-105 shadow-lg hover:shadow-xl fade-in card">
+    <img src="assets/img/team/jahir.jpeg" alt="Noe Hernandez" class="w-4/5 rounded-2xl shadow-lg mb-4" />
+    <h2 class="font-bold text-xl mt-2">Noe Hernandez</h2>
+    <h4 class="font-bold">CEO</h4>
+    <p class="text-sm text-center mb-4">
+      Noe Hernandez is a visionary entrepreneur with a passion for technology and innovation. As the CEO, he leads our team with creativity and determination, driving us towards success.
+    </p>
+    <button (click)="showMoreInfo('Noe Hernandez', 'Noe Hernandez is a visionary entrepreneur with a passion for technology and innovation. As the CEO, he leads our team with creativity and determination, driving us towards success.')" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:scale-110">More about Noe</button>
+  </div>
+  <!-- Tarjeta de Alan Gonzalez -->
+  <div class="bg-zinc-900 hover:bg-red-600 border border-zinc-500 rounded-2xl px-4 py-6 m-3 w-1/6 flex flex-col items-center transition ease-in-out delay-150 hover:scale-105 shadow-lg hover:shadow-xl fade-in card">
+    <img src="assets/img/team/jahir.jpeg" alt="Alan Gonzalez" class="w-4/5 rounded-2xl shadow-lg mb-4" />
+    <h2 class="font-bold text-xl mt-2">Alan Gonzalez</h2>
+    <h4 class="font-bold">CTO</h4>
+    <p class="text-sm text-center mb-4">
+      Alan Gonzalez is our tech guru, leading our development team with expertise and precision. As the CTO, he plays a crucial role in our technological advancements and innovation.
+    </p>
+    <button (click)="showMoreInfo('Alan Gonzalez', 'Alan Gonzalez is our tech guru, leading our development team with expertise and precision. As the CTO, he plays a crucial role in our technological advancements and innovation.')" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:scale-110">More about Alan</button>
+  </div>
+  <!-- Tarjeta de Jahir Noriega -->
+  <div class="bg-zinc-900 hover:bg-red-600 border border-zinc-500 rounded-2xl px-4 py-6 m-3 w-1/6 flex flex-col items-center transition ease-in-out delay-150 hover:scale-105 shadow-lg hover:shadow-xl fade-in card">
+    <img src="assets/img/team/jahir.jpeg" alt="Jahir Noriega" class="w-4/5 rounded-2xl shadow-lg mb-4" />
+    <h2 class="font-bold text-xl mt-2">Jahir Noriega</h2>
+    <h4 class="font-bold">Product Manager</h4>
+    <p class="text-sm text-center mb-4">
+      Jahir Noriega, our Product Manager, excels in bridging the gap between development and operations, ensuring our products meet our high standards and customer expectations.
+    </p>
+    <button (click)="showMoreInfo('Jahir Noriega', 'Jahir Noriega, our Product Manager, excels in bridging the gap between development and operations, ensuring our products meet our high standards and customer expectations.')" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:scale-110">More about Jahir</button>
+</div>
+
+  <!-- Tarjeta de Johan Cass -->
+  <div class="bg-zinc-900 hover:bg-red-600 border border-zinc-500 rounded-2xl px-4 py-6 m-3 w-1/6 flex flex-col items-center transition ease-in-out delay-150 hover:scale-105 shadow-lg hover:shadow-xl fade-in card">
+    <img src="assets/img/team/jahir.jpeg" alt="Johan Cass" class="w-4/5 rounded-2xl shadow-lg mb-4" />
+    <h2 class="font-bold text-xl mt-2">Johan Cass</h2>
+    <h4 class="font-bold">Marketing Director</h4>
+    <p class="text-sm text-center mb-4">
+      Johan Cass leads our marketing team with a creative and analytical approach, focusing on expanding our market reach and enhancing brand recognition.
+    </p>
+    <button (click)="showMoreInfo('Johan Cass', 'Johan Cass leads our marketing team with a creative and analytical approach, focusing on expanding our market reach and enhancing brand recognition.')" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:scale-110">More about Johan</button>
+  </div>
+  <!-- Tarjeta de Imanol Silva -->
+  <div class="bg-zinc-900 hover:bg-red-600 border border-zinc-500 rounded-2xl px-4 py-6 m-3 w-1/6 flex flex-col items-center transition ease-in-out delay-150 hover:scale-105 shadow-lg hover:shadow-xl fade-in card">
+    <img src="assets/img/team/jahir.jpeg" alt="Imanol Silva" class="w-4/5 rounded-2xl shadow-lg mb-4" />
+    <h2 class="font-bold text-xl mt-2">Imanol Silva</h2>
+    <h4 class="font-bold">Chief Financial Officer</h4>
+    <p class="text-sm text-center mb-4">
+      Imanol Silva, our CFO, manages the company's financial actions, overseeing investment strategies, and ensuring our financial health and growth.
+    </p>
+    <button (click)="showMoreInfo('Imanol Silva', 'Imanol Silva, our CFO, manages the company\'s financial actions, overseeing investment strategies, and ensuring our financial health and growth.')" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:scale-110">More about Imanol</button>
   </div>
 </div>

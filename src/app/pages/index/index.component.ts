@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { PhrasesService } from '../../phrases.service';
 import Swal from 'sweetalert2';
@@ -8,70 +8,93 @@ import Swal from 'sweetalert2';
   standalone: true,
   imports: [RouterLink],
   templateUrl: './index.component.html',
-  styleUrl: './index.component.css',
+  styleUrls: ['./index.component.css'],
 })
 export class IndexComponent {
-  phraseService : PhrasesService = inject(PhrasesService);
-  obtenerPhrase():void{
-    this.phraseService.phrase().subscribe(data=>{
+  constructor(private phraseService: PhrasesService) {}
 
-      Swal.fire({
-        text: data.quote,
-        showConfirmButton: false,
-        timer: 3000
-      });
-    })
+  obtenerPhrase(): void {
+    this.phraseService.phrase().subscribe({
+      next: (data) => {
+        Swal.fire({
+          text: data.quote,
+          showConfirmButton: false,
+          timer: 3000
+        });
+      },
+      error: (err) => {
+        console.error('Error al obtener frase:', err);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Algo salió mal al obtener la frase!'
+        });
+      }
+    });
   }
 
   obtenerResponse(): void {
-    this.phraseService.makeHeadRequest().subscribe(response => {
-      const headers = response.headers.keys().map((key: any) => `${key}: ${response.headers.get(key)}`).join('\n');
-      
-      Swal.fire({
-        title: 'Encabezados de respuesta',
-        text: headers,
-        icon: 'info'
-      });
+    this.phraseService.makeHeadRequest().subscribe({
+      next: (response) => {
+        const headers = response.headers.keys().map((key: any) => `${key}: ${response.headers.get(key)}`).join('\n');
+        Swal.fire({
+          title: 'Encabezados de respuesta',
+          text: headers,
+          icon: 'info'
+        });
+      },
+      error: (err) => {
+        console.error('Error al obtener respuesta:', err);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Algo salió mal al obtener la respuesta!'
+        });
+      }
     });
   }
-  
-  actualizarDatos(): void {
-    const newData = { /* Datos que deseas enviar en la solicitud PUT */ 
-    userId: 1,
-    id: 1, // El ID del recurso que deseas actualizar
-    title: 'Peticion PUT',
-    body: 'Nuevo contenido'
-  };
 
-    this.phraseService.makePutRequest(newData).subscribe(response => {
-      Swal.fire({
-        title: 'Datos actualizados correctamente',
-        text: 'id Usuario: ' + response.userId + ', title: ' + response.title,
-        icon: 'success'
-      });
-      console.log('Datos actualizados correctamente:', response);
-    }, error => {
-      console.error('Error al actualizar datos:', error);
+  actualizarDatos(): void {
+    // Asumiendo que tienes un método makePutRequest en PhrasesService
+    const newData = { userId: 1, id: 1, title: 'Peticion PUT', body: 'Nuevo contenido' };
+    this.phraseService.makePutRequest(newData).subscribe({
+      next: (response) => {
+        Swal.fire({
+          title: 'Datos actualizados correctamente',
+          text: `id Usuario: ${response.userId}, title: ${response.title}`,
+          icon: 'success'
+        });
+      },
+      error: (err) => {
+        console.error('Error al actualizar datos:', err);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Algo salió mal al actualizar los datos!'
+        });
+      }
     });
   }
 
   enviarDatos(): void {
-    const newData = { userId: 1000,
-      id: 1000, // El ID del recurso que deseas actualizar
-      title: 'Peticion POST',
-      body: 'Nueva peticion POST'};
-
-    this.phraseService.makePostRequest(newData).subscribe(response => {
-      Swal.fire({
-        title: 'Datos insertados correctamente',
-        text: 'id Usuario: ' + response.userId + ', title: ' + response.title+', contenido: '+response.body,
-        icon: 'success'
-      });
-      console.log('Respuesta del servidor:', response);
-      // Maneja la respuesta del servidor aquí
-    }, error => {
-      console.error('Error al enviar datos:', error);
-      // Maneja el error aquí
+    // Asumiendo que tienes un método makePostRequest en PhrasesService
+    const newData = { userId: 1000, id: 1000, title: 'Peticion POST', body: 'Nueva peticion POST' };
+    this.phraseService.makePostRequest(newData).subscribe({
+      next: (response) => {
+        Swal.fire({
+          title: 'Datos insertados correctamente',
+          text: `id Usuario: ${response.userId}, title: ${response.title}, contenido: ${response.body}`,
+          icon: 'success'
+        });
+      },
+      error: (err) => {
+        console.error('Error al enviar datos:', err);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Algo salió mal al enviar los datos!'
+        });
+      }
     });
   }
 }

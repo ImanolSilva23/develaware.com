@@ -2,9 +2,9 @@ import {
   __commonJS
 } from "./chunk-WKYGNSYM.js";
 
-// node_modules/sweetalert2/dist/sweetalert2.all.js
+// ../../node_modules/sweetalert2/dist/sweetalert2.all.js
 var require_sweetalert2_all = __commonJS({
-  "node_modules/sweetalert2/dist/sweetalert2.all.js"(exports, module) {
+  "../../node_modules/sweetalert2/dist/sweetalert2.all.js"(exports, module) {
     (function(global, factory) {
       typeof exports === "object" && typeof module !== "undefined" ? module.exports = factory() : typeof define === "function" && define.amd ? define(factory) : (global = typeof globalThis !== "undefined" ? globalThis : global || self, global.Sweetalert2 = factory());
     })(exports, function() {
@@ -2804,7 +2804,7 @@ var require_sweetalert2_all = __commonJS({
          * @returns {Promise<string | void>}
          */
         email: function email(string, validationMessage) {
-          return /^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9-]{2,24}$/.test(string) ? Promise.resolve() : Promise.resolve(validationMessage || "Invalid email address");
+          return /^[a-zA-Z0-9.+_'-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9-]+$/.test(string) ? Promise.resolve() : Promise.resolve(validationMessage || "Invalid email address");
         },
         /**
          * @param {string} string
@@ -3069,7 +3069,7 @@ var require_sweetalert2_all = __commonJS({
         };
       });
       SweetAlert.DismissReason = DismissReason;
-      SweetAlert.version = "11.10.5";
+      SweetAlert.version = "11.10.6";
       var Swal = SweetAlert;
       Swal["default"] = Swal;
       return Swal;
@@ -3095,7 +3095,7 @@ export default require_sweetalert2_all();
 
 sweetalert2/dist/sweetalert2.all.js:
   (*!
-  * sweetalert2 v11.10.5
+  * sweetalert2 v11.10.6
   * Released under the MIT License.
   *)
 */

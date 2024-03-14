@@ -1,0 +1,57 @@
+.container {
+    background-color: #f8f9fa; /* Fondo claro para el formulario */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+  }
+  
+  /* Espaciado entre los botones */
+  .btn {
+    margin-right: 10px;
+  }
+/* Mejora el diseño general del formulario */
+.form-group label {
+    color: #000; /* Asegura que las etiquetas sean de color negro */
+  }
+  
+  .form-control {
+    border-radius: 5px; /* Bordes redondeados para los campos de entrada */
+  }
+  
+  
+  /* Estilos para los botones */
+  .btn {
+    border: none; /* Elimina el borde predeterminado */
+    color: #fff; /* Texto blanco para mayor contraste */
+    font-weight: bold; /* Hace que el texto del botón sea más grueso */
+    margin-right: 5px; /* Espaciado entre botones */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra sutil para profundidad */
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Color primario más atractivo */
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d; /* Color secundario más atractivo */
+  }
+  
+  .btn-info {
+    background-color: #17a2b8; /* Color info más atractivo */
+  }
+  
+  .btn-danger {
+    background-color: #dc3545; /* Color peligro más atractivo */
+  }
+  
+  .btn-sm {
+    padding: .25rem .5rem; /* Ajusta el relleno para botones pequeños */
+    font-size: .875rem; /* Tamaño de fuente ligeramente más grande para legibilidad */
+  }
+  
+  /* Mejoras para la lista de ítems */
+  .list-group-item {
+    color: #000; /* Asegura que el texto de la lista sea de color negro */
+    border-radius: 5px; /* Bordes redondeados para los elementos de la lista */
+    margin-bottom: 5px; /* Espaciado entre elementos de la lista */
+  }
+  
