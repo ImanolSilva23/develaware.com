@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Item } from './item.model';
-
+import { Item } from './item.model'; // Asegúrate de que la ruta a tu modelo 'Item' sea correcta
 
 @Injectable({
   providedIn: 'root'
